@@ -1,11 +1,137 @@
+@use "../scss/variables.scss" as *;
 @import "~bootstrap/scss/bootstrap";
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    background-image: url("../img/picsum16.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: black;
+}
+header {
+    padding-inline: 100px;
+    height: 120px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    img {
+        height: 100px;
+        width: 100px;
+        background-color: white;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 1rem;
+        a {
+            text-decoration: none;
+        }
+    }
 }
 
-h1 {
-    color: red;
+.infoNav {
+    height: 2rem;
+    background-color: blue;
+}
+.card {
+    margin: 20px;
+    width: calc((100% / 6) - 40px);
+    height: 100%;
+    p {
+        color: white;
+    }
+    img {
+        width: 100%;
+        height: 250px;
+    }
+}
+.containerCard {
+    max-width: 1250px;
+    padding-top: 20px;
+    position: relative;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .series {
+        @include buttonMain;
+
+        position: absolute;
+        top: -30px;
+        left: -10px;
+    }
+}
+.jumbo {
+    background-size: 100%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    background-image: url(../img/jumbotron.jpg);
+}
+.load {
+    margin: 30px;
+    @include buttonMain;
+}
+
+.icons {
+    background-color: #0c7cec;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    height: 150px;
+}
+
+.iconMenu {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+
+    p {
+        color: white;
+        margin-left: 10px;
+    }
+    img {
+        width: 45px;
+        height: 55px;
+    }
+}
+footer {
+    color: #959595;
+    background-image: url(../img/footer-bg.jpg);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.linkContainer {
+    width: 50%;
+    margin-top: 55px;
+    padding-right: 80px;
+    display: flex;
+    justify-content: space-between;
+    li {
+        list-style: none;
+    }
+    .linkArea {
+        color: white;
+    }
+}
+.container {
+    width: 1250px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.logoBg {
+    background-image: url(../img/dc-logo-bg.png);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    align-items: center;
 }
