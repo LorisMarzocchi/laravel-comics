@@ -13,10 +13,14 @@ header {
     height: 120px;
     margin: auto;
     display: flex;
-    align-self: center;
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    .fa-caret-down{
+        color: #0282f9;
+        font-size: 0.8rem;
+    }
+
     img {
         height: 100px;
         width: 100px;
@@ -28,31 +32,74 @@ header {
         list-style: none;
         gap: 1rem;
         a {
+            display: flex;
+            flex-direction: column;
             text-decoration: none;
             color: black;
+
         }
     }
+    li{
+
+        height: 1.1rem;
+    }
+    li:hover::after {
+        display: block;
+        content: "";
+        cursor: pointer;
+        margin-top: 3px;
+        height: 1.5px;
+        background-color:#0282f9;
+     }
+    .search {
+        height: 2rem;
+        width: 170px;
+        // padding-bottom: 8px;
+        border: 0;
+        font-size: 1.1rem;
+        border-radius: 2px;
+        margin-bottom: 0.3rem;
+        border-bottom: 2px solid #0c7cec;
+        background: transparent url("/public/img/search.svg") no-repeat 13px;
+        background-position: right;
+    }
 }
-.form-control {
-    height: 2rem;
-    width: 150px;
-    padding-bottom: 12px;
-    border: 0;
-    font-size: 1.1rem;
-    border-radius: 0;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #0c7cec;
+input::placeholder{
+ text-align: right;
+ margin-right: 10px;
 }
+
+
 .infoNav {
     height: 2rem;
     background-color: #0c7cec;
+    padding-right: 100px;
+    span{
+        font-size: 0.6rem;
+        // align-self: center;
+        display: flex;
+        .fa-registered{
+            align-self: center;
+        }
+
+
+        .fa-trademark{
+            padding-top: 1px;
+            font-size: 0.4rem;
+            align-self: start;
+        }
+
+    }
+
 }
 .card {
     margin: 20px;
     width: calc((100% / 6) - 40px);
     height: 100%;
+    border: 0;
     p {
         color: white;
+        background-color:#1c1c1c;
     }
     img {
         width: 100%;

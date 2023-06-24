@@ -13,21 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/characters', function () {
+    return view('characters');
+});
+Route::get('/comics', function () {
+    return view('comics');
+});
+Route::get('/movies', function () {
+    return view('movies');
+});
 Route::get('/', function () {
     return view('home', [
 
         'arrMenu' =>  [
             [
                 'title' => 'CHARACTERS',
-                'link' => '#',
+                'link' => '/characters',
             ],
             [
                 'title' => 'COMICS',
-                'link' => '#',
+                'link' => '/comics',
             ],
             [
                 'title' => 'MOVIES',
-                'link' => '#',
+                'link' => '/movies',
             ],
             [
                 'title' => 'TV',
